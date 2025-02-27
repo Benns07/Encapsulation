@@ -1,0 +1,18 @@
+class Vehicle:
+    def __init__(self, make, model):
+        self.__make = make  
+        self.__model = model 
+
+    def display_info(self):
+        print(f"Model Make: {self.__make}, Vehicle: {self.__model}")
+
+class Car(Vehicle):
+    def __init__(self, make, model, doors):
+        super().__init__(make, model)
+        self.__doors = doors 
+
+    def display_info(self):
+        super().display_info()
+        print(f"Number of Doors: {self.__doors}")
+car = Car("Firarri", "Honda", 10)
+car.display_info()
